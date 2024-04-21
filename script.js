@@ -47,21 +47,17 @@ function loadtask(json,i){
     taskdiv.append(task,label);
     div.append(taskdiv);
     task.addEventListener('click',function(){
-        task_id = 'task'+ String(i)
-        var data = localStorage.getItem(task_id);
-        data = JSON.parse(data);
-        data['status'] = !data['status'];
-        if(data['status']){
-            label.style.textDecoration='line-through'
-        }
-        else{
-            label.style.textDecoration='none'
-        }
-        data = JSON.stringify(task_id,data);
+        var id = task.id;
+        console.log(id);
+        task_id = 'task'+String(id);
+        console.log(task_id)
+        data = localStorage.getItem(task_id);
+        console.log(data)
     })
 }
 clrbtn.onclick = ()=>{
     clear();
+    setcounter();
 }
 setcounter()
 btn.onclick = ()=>{
