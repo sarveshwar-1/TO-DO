@@ -71,10 +71,5 @@ btn.onclick = ()=>{
     counter = parseInt(counter);
     counter = counter+1;
     localStorage.setItem('counter',String(counter));
-<<<<<<< HEAD
-    loadtask(task,counter)
-=======
-    loadtask(task,counter);
->>>>>>> b2b96a3c4b2ebdad26d41d5d201f89f549ee2746
 };
 main()
