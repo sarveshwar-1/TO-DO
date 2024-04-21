@@ -77,5 +77,6 @@ btn.onclick = ()=>{
     localStorage.setItem('counter',String(counter));
     loadtask(task,counter)
     console.log("hello");
+    console.log("hello";)
 };
 main()
