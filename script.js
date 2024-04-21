@@ -7,7 +7,6 @@ setcounter=()=>{
     if(counter == 'NaN' || counter == null){
         counter = '0';
         localStorage.setItem('counter',counter);
-        console.log('hi')
     }
 }
 function clear(){
