@@ -1,0 +1,36 @@
+
+.main{
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+.main-block{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: grey;
+    padding: 10px;
+    border-radius: 10px;
+    color:black;
+}
+.input-block{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.list-block{
+    background-color:darkblue;
+    padding-left: 45px;
+    padding-right: 45px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.header{
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+html{
+    background-color: black;
+}
