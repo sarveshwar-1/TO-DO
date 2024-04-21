@@ -76,5 +76,6 @@ btn.onclick = ()=>{
     counter = counter+1;
     localStorage.setItem('counter',String(counter));
     loadtask(task,counter)
+    console.log("Hello Sarveshwar!!!!!");
 };
 main()
