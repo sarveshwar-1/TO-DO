@@ -1,6 +1,5 @@
 let btn = document.querySelector('#add-btn')
 let div = document.querySelector('.list-block');
-console.log("sarvesh is hawwwt!!!")
 let list = [];
 let clrbtn = document.querySelector('#clear-btn');
 setcounter=()=>{
@@ -15,7 +14,6 @@ function clear(){
     div.innerHTML = '';
 }
 function main(){
-    // console.log('inside main')
     console.log('inside main')
     var counter = JSON.parse(localStorage.getItem('counter'));
     counter = parseInt(counter);
@@ -76,8 +74,6 @@ btn.onclick = ()=>{
     counter = parseInt(counter);
     counter = counter+1;
     localStorage.setItem('counter',String(counter));
-    loadtask(task,counter)
-    console.log("Hello Sarveshwar!!!!!");
-    console.log("hello da akshay");
+    loadtask(task,counter);
 };
 main()
