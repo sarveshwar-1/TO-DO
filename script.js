@@ -1,5 +1,6 @@
 let btn = document.querySelector('#add-btn')
 let div = document.querySelector('.list-block');
+console.log("sarvesh is hawwwt!!!")
 let list = [];
 let clrbtn = document.querySelector('#clear-btn');
 setcounter=()=>{
@@ -68,7 +69,7 @@ setcounter()
 btn.onclick = ()=>{
     var val = document.getElementById('input-text');
     let task = {name:val.value,status:false}
-    counter = localStorage.getItem('counter')
+    counter = localStorage.getItem('counter');
     task_value = JSON.stringify(task);
     task_key = 'task' + String(counter);
     localStorage.setItem(task_key,task_value);
