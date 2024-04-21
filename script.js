@@ -9,6 +9,7 @@ setcounter=()=>{
         localStorage.setItem('counter',counter);
     }
 }
+
 function clear(){
     localStorage.clear();
     div.innerHTML = '';
