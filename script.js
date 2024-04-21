@@ -1,6 +1,5 @@
 let btn = document.querySelector('#add-btn')
 let div = document.querySelector('.list-block');
-console.log("sarvesh is hawwwt!!!")
 let list = [];
 let clrbtn = document.querySelector('#clear-btn');
 setcounter=()=>{
@@ -77,7 +76,5 @@ btn.onclick = ()=>{
     counter = counter+1;
     localStorage.setItem('counter',String(counter));
     loadtask(task,counter)
-    console.log("Hello Sarveshwar!!!!!");
-    console.log("hello da akshay");
 };
 main()
