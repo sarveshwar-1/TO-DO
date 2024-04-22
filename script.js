@@ -15,7 +15,6 @@ function clear(){
     div.innerHTML = '';
 }
 function main(){
-    console.log('inside main')
     var counter = JSON.parse(localStorage.getItem('counter'));
     counter = parseInt(counter);
     for(let i = 0;i<counter;i++){
@@ -48,12 +47,24 @@ function loadtask(json,i){
     taskdiv.append(task,label);
     div.append(taskdiv);
     task.addEventListener('click',function(){
-        var id = task.id;
+        var id = this.id;
+        var label = document.getElementsByTagName('label');
+        console.log(label[0].getAttribute('for'));
         console.log(id);
         task_id = 'task'+String(id);
-        console.log(task_id)
+        console.log(task_id);
         data = localStorage.getItem(task_id);
+        data = JSON.parse(data);
         console.log(data)
+        data['status'] = !data['status']
+        if(data['status']){
+            label[id].style.textDecoration = 'line-through';
+        }
+        else{
+            label[id].style.textDecoration = 'none';
+        }
+        data = JSON.stringify(data);
+        localStorage.setItem(task_id,data);
     })
 }
 clrbtn.onclick = ()=>{
@@ -69,6 +80,7 @@ btn.onclick = ()=>{
     task_key = 'task' + String(counter);
     localStorage.setItem(task_key,task_value);
     counter = parseInt(counter);
+    loadtask(task,counter)
     counter = counter+1;
     localStorage.setItem('counter',String(counter));
 };
