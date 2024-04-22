@@ -49,13 +49,9 @@ function loadtask(json,i){
     task.addEventListener('click',function(){
         var id = this.id;
         var label = document.getElementsByTagName('label');
-        console.log(label[0].getAttribute('for'));
-        console.log(id);
         task_id = 'task'+String(id);
-        console.log(task_id);
         data = localStorage.getItem(task_id);
         data = JSON.parse(data);
-        console.log(data)
         data['status'] = !data['status']
         if(data['status']){
             label[id].style.textDecoration = 'line-through';
